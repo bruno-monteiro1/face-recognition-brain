@@ -117,13 +117,13 @@ onRouteChange = (route) => {
 }
 
   render() {
-    const { isSignedIn, imageUrl, route, box } = this.state; //destructuring
+    const { isSignedIn, imageUrl, route, box } = this.state;
     return (
       <div className="App">
         <Particles className="particles" params={particlesOptions} />
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>
         { route === 'home' 
-        ? <div> {/*como este return tem varios itens, eh necessario agrupar em uma div*/}
+        ? <div> 
         <Logo />
         <Rank name={this.state.user.name} entries={this.state.user.entries}/>
         <ImageLinkForm onInputChange={this.onInputChange} 
